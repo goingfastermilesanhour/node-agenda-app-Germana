@@ -1,0 +1,14 @@
+﻿tr{
+    background-color:#0b3446;
+    font-weight:700;
+    color: white;
+}
+th, td{
+    text-align:center;
+    padding: 25px;
+}
+
+th{
+    background-color:#00aeef;
+    color:floralwhite;
+}

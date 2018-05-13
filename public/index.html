@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="Table-CSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Random German Words</title>
+</head>
+<body>
+    <div class="header">
+        <h3 id="left"> Welcome to Random German Words </h3>
+        <h3 id="right"> Learn common German phrases as well as basic grammar notions </h3>
+    </div>
+
+
+    <div id="button-group">
+                <button onclick="randomTechnicalWords()">Random Technical Terms</button>
+                <button onclick="randomWords()">Random German Words </button>
+                <button onclick="randomMedicalWords()">Random Medical Terms </button>
+    </div>
+    <div id="randomMedicalWordsModal"><span id="closeButtonM" onclick="closeIt()">&times;</span><span id="randomMedicalWordsPlace"></span></div>
+    <div id="randomWordsModal"><span id="closeButton" onclick="closeIt()">&times;</span><span id="randomWordsPlace"></span></div>
+    <div id="randomTechnicalWordsModal"><span id="closeButtonT" onclick="closeIt()">&times;</span><span id="randomTechnicalWordsPlace"></span></div>
+    <div id="translatedWord"></div>
+
+
+    <div class="content">
+            <div id="widget-left">
+               <p>Random verb:&nbsp; <p id="verbOnRefresh"></p>         
+            </div>
+
+            <div class="widget-right">
+                <p>
+                    Important Grammar Tips
+                </p>
+            </div>
+        <div style="clear:both"></div>
+            <div class="test">
+            <div id="left-side">
+                <h3>Can you conjugate this verb? </h3>
+                <p>Give it a go. Take a look at the endings for the so called "regular verbs" of the German language:</p><br />
+                    <p id="declination">
+                        <strong>Present Tense of "machen":</strong><br /> ich ...-e - ich mache<br> du ...st - du machst<br> er, sie, es ...-t - er, sie, es macht<br> wir ...-en - wir machen<br> ihr ...-t - ihr macht<br> sie, Sie ...-en - sie/Sie machen<br>
+                    </p><br />
+                <p>Now that you know the endings of these regular verbs, try to do as many conjugations as you can, in order to get a good grasp on the principles.</p>
+                <p>Look at the conjugation of the verb haben on the right side. Let's try to build the German present perfect by using the conjugated version of haben, which here is a helping verb and adding the past participle of "machen" which is "gemacht". Like this: ich habe ... gemacht</p>
+            </div>
+
+            <div id="right-side">
+                <h3> The verbs haben & sein </h3>
+                <p> Now let us have a look at the Present Tense and the Simple Past (Präteritum) forms of the most important verbs in the German language. Note that these two verbs are also "helping verbs". This means that upon building another tense like Present Perfect these verbs are required. Haben is used for static actions while sein is used for dynamic actions.</p><br />
+                
+                <div id="haben">                 
+                      <p><strong>Present Tense of "haben":</strong><br />ich habe = I have<br />du hast<br />er, sie, es hat<br />wir haben = We have<br />ihr habt<br />sie, Sie haben</p><br />
+                      <p><strong>Simple Past Tense of "haben":</strong><br />ich hatte = I had<br />du hattest<br />er, sie, es hatte<br />wir hatten = We had<br />ihr hattet<br />sie, Sie hatten</p><br />
+                </div>
+                
+                <div id="sein">
+                      <p><strong>Present Tense of "sein":</strong><br />ich bin = I am<br />du bist<br />er, sie, es ist<br />wir sind = We are<br />ihr seid<br />sie, Sie sind</p><br />
+                      <p><strong>Simple Past Tense of "sein":</strong><br />ich war = I was<br />du warst<br />er, sie, es war<br />wir waren = We were<br />ihr wart<br />sie, Sie waren</p><br />
+                </div>
+            </div>
+            </div>
+
+            <div id="bottom-menu">
+                <ul>
+                    <li id="Alphabet">Alphabet and Pronunciation</li>
+                    <li id="Declension">Complete article declension</li>
+                    <li id="Vocabulary">Vocabulary: common topics and situations</li>
+                </ul>
+            </div>
+
+    </div>
+
+    <!--la form action trebuie sa scriem adresa unui server care stie sa prelucreze datele -->
+
+    <div id="form" style="color: red">
+        <form action="/index.html">
+            First name:<br>
+            <input type="text" required name="firstName" value="">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastName" value="">
+            <br>
+            Your message:<br>
+            <input type="text" name="lastName" value="">
+            <br><br>
+            <input type="submit" value="Submit">
+            <br><br>
+            <br><br>
+        </form>
+    </div>
+
+
+    <div class="footer">
+        <h4>Thank you for visiting!</h4>  <br />
+        <div id="clock"></div>
+        <h4>Don't forget to come back tomorrow</h4><br />
+    </div>
+
+    <script src="Script.js" type="text/javascript"></script>
+
+    <script src="breadcrumb-change.js" type="text/javascript"></script>
+
+</body>
+</html>
